@@ -8,9 +8,11 @@ dotenv.config(); // Load environment variables
 
 const app = express();
 
-// Middlewares
+// Enable CORS for all origins and handle preflight
 app.use(cors());
-app.options('*', cors()); // <-- ADD THIS
+app.options('*', cors()); // <-- IMPORTANT to handle OPTIONS
+
+// Body parser
 app.use(express.json());
 
 // Routes
