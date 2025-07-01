@@ -1,0 +1,121 @@
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #a5b4fc, #c4b5fd);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+}
+
+.signup-card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.signup-left,
+.signup-right {
+  flex: 1 1 320px;
+  margin: 1rem;
+}
+
+.signup-left h2 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.signup-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.signup-left input {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #ffffffd9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.submit-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.03);
+  background: #1a1a1a;
+}
+
+.signup-right {
+  text-align: left;
+  margin-top: 8.5rem;
+}
+
+.signup-right p {
+  margin-bottom: 1rem;
+  color: #000;
+  margin-left: 4.2rem;
+}
+
+.signup-right a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.or-divider {
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #444;
+  margin-left: 11rem;
+}
+
+.google-btn,
+.facebook-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 240px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin: 0.5rem auto;
+}
+
+.google-btn:hover,
+.facebook-btn:hover {
+  transform: scale(1.03);
+}
+
+.facebook-btn {
+  background: #1877f2;
+  color: white;
+  border: none;
+}

@@ -1,0 +1,469 @@
+/* src/Home.css */
+
+.home {
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 64px; /* Space for fixed navbar */
+}
+
+.hero-section {
+  background-image: url('/public/imggg.jpg'); /* fixed path */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px 80px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #3b82f6;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.explore-btn,
+.practice-btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+/* Focus style for accessibility */
+.explore-btn:focus,
+.practice-btn:focus,
+.cta-btn:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.explore-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.explore-btn:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.practice-btn {
+  background-color: white;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+}
+
+.practice-btn:hover {
+  background-color: #e0ecff;
+  transform: scale(1.05);
+}
+
+/* Features Section */
+.features-section {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  transform: translateY(-6px) scale(1.03);
+}
+
+.feature-card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #3b82f6;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  background-color: #3b82f6;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  background-color: white;
+  color: #3b82f6;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-btn:hover {
+  background-color: #e0ecff;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #f1f5f9;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0;
+}
+
+.footer-section {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  padding: 60px 20px 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  cursor: default; /* default unless link */
+}
+
+/* Make footer list items clickable and hover */
+.footer-column ul.clickable li {
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #cbd5e1;
+}
+
+.footer-column ul.clickable li:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* Icons inside footer */
+.footer-column ul li i {
+  margin-right: 8px;
+  color: #3b82f6;
+}
+
+.footer-column.brand p {
+  font-size: 0.95rem;
+  margin: 1rem 0;
+}
+
+.social-icons i {
+  font-size: 1.1rem;
+  margin-right: 12px;
+  cursor: pointer;
+  color: #cbd5e1;
+  transition: color 0.3s;
+}
+
+.social-icons i:hover {
+  color: #3b82f6;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.footer-links a:hover {
+  color: #3b82f6;
+}
+
+.footer-logo .logo-circle {
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.footer-logo .logo-text {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: white;
+}
+
+/* Responsive font sizes for hero */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Popular Subjects Section */
+/* Popular Subjects Section */
+.popular-subjects-section {
+  padding: 60px 20px;
+  background-color: #f8fafc;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.popular-subjects-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.subject-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.subject-card {
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.subject-icon {
+  background: linear-gradient(to bottom, #6366f1, #0000ff);
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.subject-card h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.subject-card p {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* View All Button */
+.view-all-btn-container {
+  margin-top: 2rem;
+}
+
+.view-all-btn {
+  padding: 0.6rem 1.4rem;
+  border: 2px solid #2563eb; /* Blue border */
+  background-color: transparent;
+  color: #2563eb; /* Blue text */
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+
+.subject-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.subject-card {
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.subject-card:hover {
+  background-color: #3b82f6;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Recent Study Notes Section */
+.recent-notes-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.recent-notes-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.note-card {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease;
+  text-align: left;
+}
+
+.note-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #1e3a8a;
+}
+
+.note-card p {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.4;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+}
