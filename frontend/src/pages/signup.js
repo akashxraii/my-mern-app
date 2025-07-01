@@ -21,27 +21,30 @@ function SignUp() {
       setMessage("Passwords do not match!");
       return;
     }
+
     try {
       const { name, email, password } = form;
-      const res = await axios.post('http://192.168.1.14:5000/api/auth/register', {
+      const apiUrl = process.env.REACT_APP_API_URL;
+
+      const res = await axios.post(`${apiUrl}/api/auth/register`, {
         name,
         email,
         password,
       });
-      setMessage(res.data.message);
+
+      setMessage(res.data.message || "Registration successful!");
       setForm({
         name: '',
         email: '',
         password: '',
         confirmPassword: '',
       });
-    // ...existing code...
     } catch (err) {
       setMessage(
         err.response?.data?.error || err.message || 'Registration failed'
       );
-    }}
-// ...existing code...
+    }
+  };
 
   return (
     <div className="signup-container">
